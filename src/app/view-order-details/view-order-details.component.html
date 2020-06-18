@@ -1,0 +1,36 @@
+<app-header></app-header>
+<body class="body">
+  <br>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <h1 class="allhead">View Order</h1>
+      </div>
+      <div class="col-md-7" style="margin-top:10px;">
+        <hr>
+      </div>             
+      <div class="col-md-1"></div>
+    </div><br><br>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form novalidate #f="ngForm" (ngSubmit)="orderDetails(); f.reset()">
+          <div class="form-group">
+            <label>Order ID</label>
+            <input type="text" class="form-control" id="orderid" placeholder="Enter Order ID" name="orderid" [(ngModel)]="orderid" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+          <button type="submit" class="subbut2">Submit</button> <br><br>
+        </div>
+        <div class="col-md-6">
+          <button type="reset" class="subbut2">Reset</button> <br><br>
+        </div>
+        </div>
+  </form>
+</div>
+<div class="col-md-3"></div>
+</div>
+<br><br>
+</body>
+<app-footer></app-footer>

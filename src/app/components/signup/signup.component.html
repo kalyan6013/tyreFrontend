@@ -1,0 +1,44 @@
+<app-header></app-header>
+<body class="body">
+  <br>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-3">
+        <h1 class="allhead">Signup</h1>
+      </div>
+      <div class="col-md-7" style="margin-top:10px;">
+        <hr>
+      </div>             
+      <div class="col-md-1"></div>
+    </div><br><br>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <form novalidate #f="ngForm" (ngSubmit)="onRegister(); f.reset()">
+          <div class="form-group">
+              <label>Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username" [(ngModel)]="user.username" #username="ngModel" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+          </div>
+          <div class="form-group">
+            <label>OrgName</label>
+              <input type="text" class="form-control" id="orgname" placeholder="Enter OrgName" name="orgName" [(ngModel)]="user.orgName" #orgName="ngModel" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+          </div>
+          <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" id="pswd" placeholder="Enter Password" name="password" [(ngModel)]="user.password" #password="ngModel" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+          <button type="submit" class="subbut2" [disabled]="f.form.invalid">Submit</button> <br><br>
+        </div>
+        <div class="col-md-6">
+          <button type="reset" class="subbut2">Reset</button> <br><br>
+        </div>
+        </div>
+  </form>
+</div>
+<div class="col-md-3"></div>
+</div>
+<br><br>
+</body>
+<app-footer></app-footer>

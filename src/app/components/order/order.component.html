@@ -15,36 +15,36 @@
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-6">
-      <form>
+      <form novalidate #f="ngForm" (ngSubmit)="onCreateOrder(); f.reset()">
         <div class="form-group">
             <label>Order ID</label>
-            <input type="text" class="form-control" id="orderid" placeholder="Enter Order ID" name="orderid" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+            <input type="text" class="form-control" id="orderid" placeholder="Enter Order ID" name="orderid" [(ngModel)]="orderid" minlength="1" maxlength="15" required style="width:400px;height:40px;">
         </div>
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="text" class="form-control" id="qty" placeholder="Enter Quantity" name="qty" [(ngModel)]="qty" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+      </div>
         <div class="form-group">
           <label>Product ID</label>
-            <input type="text" class="form-control" id="prdit" placeholder="Enter Product ID" name="prdit" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+            <input type="text" class="form-control" id="prdit" placeholder="Enter Product ID" name="prdit" [(ngModel)]="prdit" minlength="1" maxlength="15" required style="width:400px;height:40px;">
         </div>
-        <div class="form-group">
-            <label>Quantity</label>
-            <input type="text" class="form-control" id="qty" placeholder="Enter Quantity" name="qty" minlength="1" maxlength="15" required style="width:400px;height:40px;">
-        </div>
-        <div class="form-group">
-            <label>Price</label>
-            <input type="text" class="form-control" id="price" placeholder="Enter Price" name="qty" minlength="1" maxlength="15" required style="width:400px;height:40px;">
-        </div>
-        <div class="form-group ">
+        <!-- <div class="form-group ">
           <label>Order Date</label>
             <input type="date" class="form-control" id="example-date-input" name="startdate" style="width:400px;height:40px;">
-        </div>
+        </div> -->
         <div class="form-group ">
             <label>Expected Date</label>
-              <input type="date" class="form-control" id="example-date-input" name="expdate" style="width:400px;height:40px;">
+              <input type="date" class="form-control" id="example-date-input" name="expdate" [(ngModel)]="expdate" prditstyle="width:400px;height:40px;">
           </div>
           <div class="form-group ">
               <label>Completion Date</label>
-                <input type="date" class="form-control" id="example-date-input" name="compdate" style="width:400px;height:40px;">
+                <input type="date" class="form-control" id="example-date-input" name="compdate" [(ngModel)]="compdate" style="width:400px;height:40px;">
             </div>
             <div class="form-group">
+              <label>Price</label>
+              <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price" [(ngModel)]="price" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+          </div>
+            <!-- <div class="form-group">
                 <label>Status</label>
                <ng-select class="form-control"
                allowClear="true"
@@ -52,12 +52,12 @@
                (data)="refreshValue($event)"
                style="width: 400px;height:40px;">
                </ng-select>
-              </div>
+              </div> -->
 
-              <div class="form-group">
+              <!-- <div class="form-group">
                   <label>Invoice Number</label>
                   <input type="text" class="form-control" id="qty" placeholder="Enter Invoice Number" name="qty" minlength="1" maxlength="15" required style="width:400px;height:40px;">
-              </div>
+              </div> -->
               <div class="row">
                 <div class="col-md-6">
               <button type="submit" class="subbut2">Submit</button> <br><br>
