@@ -1,10 +1,27 @@
-<app-header></app-header>
+<nav class="navbar navbar-expand-md bg-light navbar-light topnav">
+  <a href="#"><img class="logoimg" src="assets/logo.png" height="90" width="90"></a>
+  <a class="navbar-brand" [routerLink]="['/login']"><h2 class="logotxt"><b>Hyperledger Fabric</b></h2></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/login']">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/signup']" >Signup</a>
+              </li> 
+        </ul>
+        </div>
+</nav>
 <body class="body">
   <br>
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-3">
         <h1 class="allhead">Login</h1>
+        <!-- <span *ngIf="this.infoMessage.length > 0">{{ this.infoMessage }}</span> -->
       </div>
       <div class="col-md-7" style="margin-top:10px;">
         <hr>

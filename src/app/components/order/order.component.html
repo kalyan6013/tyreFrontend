@@ -32,18 +32,21 @@
           <label>Order Date</label>
             <input type="date" class="form-control" id="example-date-input" name="startdate" style="width:400px;height:40px;">
         </div> -->
-        <div class="form-group ">
-            <label>Expected Date</label>
-              <input type="date" class="form-control" id="example-date-input" name="expdate" [(ngModel)]="expdate" prditstyle="width:400px;height:40px;">
-          </div>
-          <div class="form-group ">
-              <label>Completion Date</label>
-                <input type="date" class="form-control" id="example-date-input" name="compdate" [(ngModel)]="compdate" style="width:400px;height:40px;">
-            </div>
+     
             <div class="form-group">
               <label>Price</label>
               <input type="text" class="form-control" id="price" placeholder="Enter Price" name="price" [(ngModel)]="price" minlength="1" maxlength="15" required style="width:400px;height:40px;">
           </div>
+         
+          <div class="form-group ">
+              <label>Expected Date</label>
+                <input type="date" class="form-control" id="example-date-input" name="expdate" [(ngModel)]="expdate" style="width:400px;height:40px;">
+            </div>
+
+            <div class="form-group ">
+              <label>Completion Date</label>
+                <input type="date" class="form-control" id="example-date-input" name="compdate" [(ngModel)]="compdate" style="width:400px;height:40px;">
+            </div>
             <!-- <div class="form-group">
                 <label>Status</label>
                <ng-select class="form-control"

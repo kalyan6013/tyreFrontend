@@ -14,6 +14,10 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { ViewOrderDetailsComponent } from './view-order-details/view-order-details.component';
+import { UpdateorderComponent } from './components/updateorder/updateorder.component';
+import { CreateinvoiceComponent } from './components/createinvoice/createinvoice.component';
+import { ViewinvoiceComponent } from './components/viewinvoice/viewinvoice.component';
+import { UpdateinvoiceComponent } from './components/updateinvoice/updateinvoice.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { ViewOrderDetailsComponent } from './view-order-details/view-order-detai
     InvoiceComponent,
     SignupComponent,
     LoginComponent,
-    ViewOrderDetailsComponent
+    ViewOrderDetailsComponent,
+    UpdateorderComponent,
+    CreateinvoiceComponent,
+    ViewinvoiceComponent,
+    UpdateinvoiceComponent
   ],
   imports: [
     BrowserModule,

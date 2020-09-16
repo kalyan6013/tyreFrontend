@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlockchainService } from 'src/app/blockchain.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -21,19 +22,20 @@ export class OrderComponent implements OnInit {
     compdate:'';
     price:'';  
 
-  constructor(private orderService:BlockchainService) { }
+  constructor(private route:Router, private orderService:BlockchainService) { }
 
   ngOnInit() {
   }
   onCreateOrder(){
     const order={
-      "peers":["peer0.audi.orderermanagement.com","peer0.mrf.orderermanagement.com"],
+      "peers":["peer0.buyer.orderermanagement.com","peer0.seller.orderermanagement.com"],
       "fcn":"createOrder",
-      "args" : [ this.orderid, this.qty, this.prdit, this.expdate, this.compdate, this.prdit, 'MRF'
+      "args" : [ this.orderid, this.qty, this.prdit, this.expdate, this.compdate, this.prdit, 'Seller'
       ]
   }
     console.log(order);
   this.orderService
   .onCreateOrder(order);
+  this.route.navigate(['/vieworder']);
 }
 }

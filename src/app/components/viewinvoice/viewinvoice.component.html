@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-md-3">
-        <h1 class="allhead">View Order</h1>
+        <h1 class="allhead">View Invoice</h1>
       </div>
       <div class="col-md-7" style="margin-top:10px;">
         <hr>
@@ -14,10 +14,10 @@
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <form novalidate #f="ngForm" (ngSubmit)="orderDetails(); f.reset()">
+        <form novalidate #f="ngForm" (ngSubmit)="invoiceDetails(); f.reset()">
           <div class="form-group">
-            <label>Order ID</label>
-            <input type="text" class="form-control" id="orderid" placeholder="Enter Order ID" name="orderid" [(ngModel)]="orderid" minlength="1" maxlength="15" required style="width:400px;height:40px;">
+            <label>Invoice ID</label>
+            <input type="text" class="form-control" id="invoiceid" placeholder="Enter Invoice ID" name="invoiceid" [(ngModel)]="invoiceid" minlength="1" maxlength="15" required style="width:400px;height:40px;">
           </div>
           <div class="row">
             <div class="col-md-6">
@@ -33,23 +33,23 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <td>Order ID</td>
+          <td>Invoice ID</td>
           <td>Quantity</td>
           <td>Product ID</td>
-          <td>Order Date</td>
-          <td>Expected Date</td>
-          <td>Price</td>
+          <td>Invoice Date</td>
+          <td>Completion Date</td>
+          <td>Total Amount</td>
           <td>Status</td>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>{{this.data.order_id}}</td>
+          <td>{{this.data.invoice_id}}</td>
           <td>{{this.data.qty}}</td>
           <td>{{this.data.prod_id}}</td>
-          <td>{{this.data.order_date | date: 'yyyy-MM-dd'}}</td>
-          <td>{{this.data.expectedDate | date: 'yyyy-MM-dd'}}</td>
-          <td>{{this.data.price}}</td>
+          <td>{{this.data.issueDate | date: 'yyyy-MM-dd'}}</td>
+          <td>{{this.data.completionDate | date: 'yyyy-MM-dd'}}</td>
+          <td>{{this.data.totalAmount}}</td>
           <td>{{this.data.status}}</td>
         </tr>
       </tbody>
@@ -64,4 +64,5 @@
 </div>
 <br><br>
 </body>
+<br><br><br>
 <app-footer></app-footer>

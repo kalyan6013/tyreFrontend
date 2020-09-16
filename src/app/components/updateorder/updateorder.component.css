@@ -1,0 +1,21 @@
+.footer{
+    height:auto;
+    background-color: #2F4F4F;
+    padding-top:10px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.social{
+    font-size:36px;
+    color:white;
+    padding-top:15px;
+    margin-right:20px;
+}
+.social:hover{
+    color:orange !important;
+}
+
+.footer_text{
+    color: white;
+    font-size:14px;
+}
